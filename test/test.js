@@ -7,7 +7,7 @@ describe('next/median', function() {
     var arr1 = [23, 29, 20, 32, 23, 21, 33, 25];
     var arr2 = [10, 20, 20, 20, 30];
 
-    assert.equal(nx.median(arr1), 23);
+    assert.equal(nx.median(arr1), 24);
     assert.equal(nx.median(arr2), 20);
   });
 });

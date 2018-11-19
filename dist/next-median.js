@@ -3,15 +3,15 @@
   var nx = global.nx || require('next-js-core2');
 
   nx.median = function(inArray) {
-    var next;
     var mid = inArray.length / 2;
     var prev = parseInt(mid);
-
+    var arr = inArray.slice(0).sort(function(a, b) {
+      return a - b;
+    });
     if (prev === mid) {
-      return inArray[mid];
+      return 0.5 * (arr[mid] + arr[mid - 1]);
     } else {
-      next = Math.ceil(mid);
-      return 0.5 * (inArray[prev] + inArray[next]);
+      return arr[prev];
     }
   };
 
