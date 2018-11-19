@@ -3,14 +3,13 @@
   var nx = global.nx || require('next-js-core2');
 
   nx.median = function(inArray) {
-    var length = inArray.length;
-    var mid = length / 2;
-    var prev, next;
+    var next;
+    var mid = inArray.length / 2;
+    var prev = parseInt(mid);
 
-    if (parseInt(mid) === mid) {
+    if (prev === mid) {
       return inArray[mid];
     } else {
-      prev = Math.floor(mid);
       next = Math.ceil(mid);
       return 0.5 * (inArray[prev] + inArray[next]);
     }
