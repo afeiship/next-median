@@ -8,11 +8,7 @@
     var arr = inArray.slice(0).sort(function(a, b) {
       return a - b;
     });
-    if (prev === mid) {
-      return 0.5 * (arr[mid] + arr[mid - 1]);
-    } else {
-      return arr[prev];
-    }
+    return prev === mid ? 0.5 * (arr[mid] + arr[mid - 1]) : arr[prev];
   };
 
   if (typeof module !== 'undefined' && module.exports) {
